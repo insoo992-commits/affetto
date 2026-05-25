@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #172554 0%, #050816 45%),
+    #020617;
+
+  overflow-x: hidden;
+  color: white;
+
+  font-family: var(--font-body);
+
+  background-attachment: fixed;
+}
+
+/* 제목 폰트 */
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  letter-spacing: -0.03em;
+}
+
+/* 드리미 glow */
+.dream-glow {
+  text-shadow:
+    0 0 20px rgba(255,255,255,0.08),
+    0 0 40px rgba(255,255,255,0.06),
+    0 0 80px rgba(168,85,247,0.18);
+}
+
+/* 안개 */
+.fog {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.03), transparent 70%);
+  filter: blur(120px);
+  animation: fogMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes fogMove {
+  from {
+    transform: translateX(-5%) translateY(0%);
+  }
+
+  to {
+    transform: translateX(5%) translateY(-5%);
+  }
+}
