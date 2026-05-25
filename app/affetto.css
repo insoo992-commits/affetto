@@ -694,6 +694,32 @@ footer {
   word-break: keep-all; /* 단어 단위로 줄바꿈하여 어색함 방지 */
 }
 
+/* 상단 메뉴 줄바꿈 방지 */
+@media (max-width: 850px) {
+  nav {
+    gap: 15px !important; /* 메뉴 간격을 36px에서 15px로 확 줄입니다 */
+  }
+  
+  nav a {
+    font-size: 12px !important; /* 글자 크기도 살짝 줄여서 한 줄에 다 들어오게 합니다 */
+  }
+
+  header {
+    padding: 24px 20px !important; /* 헤더 양옆 여백을 줄여서 메뉴 공간을 확보합니다 */
+  }
+}
+
+@media (max-width: 600px) {
+  /* 아주 좁은 화면에서는 메뉴를 아예 숨기거나, 필요시 더 줄여야 합니다 */
+  nav {
+    gap: 10px !important;
+  }
+  
+  .nav-cta {
+    display: none; /* 모바일에서는 가입하기 버튼을 숨겨서 공간 확보 */
+  }
+}
+
 .hero-content > *:nth-child(1) { animation-delay: 0.15s; }
 .hero-content > *:nth-child(2) { animation-delay: 0.35s; }
 .hero-content > *:nth-child(3) { animation-delay: 0.55s; }
