@@ -648,6 +648,52 @@ footer {
   opacity: 0;
 }
 
+/* 태블릿 및 모바일 대응 (반응형 설정) */
+@media (max-width: 1024px) {
+  /* 섹션 여백 줄이기 */
+  .section-intro, .features-grid, .testimonial-section, .cta-section {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  /* 기능 그리드 2열로 변경 */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 헤더 패딩 줄이기 */
+  header {
+    padding: 20px 30px !important;
+  }
+
+  /* 그리드들을 1열로 변경 (모바일) */
+  .section-intro, .features-grid, .testimonial-section {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* 글자 크기 조정 */
+  .hero-title {
+    font-size: clamp(40px, 10vw, 60px) !important;
+  }
+  
+  .card-title {
+    font-size: 28px !important;
+  }
+
+  /* 통계 밴드 2열로 변경 */
+  .stats-band {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* 글자 줄바꿈 방지 및 조정 */
+.hero-title, .section-heading, .card-title, .cta-heading {
+  word-break: keep-all; /* 단어 단위로 줄바꿈하여 어색함 방지 */
+}
+
 .hero-content > *:nth-child(1) { animation-delay: 0.15s; }
 .hero-content > *:nth-child(2) { animation-delay: 0.35s; }
 .hero-content > *:nth-child(3) { animation-delay: 0.55s; }
